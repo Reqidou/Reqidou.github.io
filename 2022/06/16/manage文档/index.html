@@ -1,0 +1,1870 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="manage文档, ZhaoXuan&#39;s Blog">
+    <meta name="description" content="1. 创建项目
+
+
+npm i element-ui 配置组件库
+
+配置axios库 npm i axios –save
+
+
+2. 项目托管github2.1github新建项目
+git remote add orign https://g">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>manage文档 | ZhaoXuan&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">ZhaoXuan&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">ZhaoXuan&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Hexo创建的博客
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">manage文档</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-06-16
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-09-16
+                </div>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1. 创建项目"></a>1. 创建项目</h3><ol>
+<li><p><img src="C:\Users\14747\AppData\Roaming\Typora\typora-user-images\image-20220729163305614.png" alt="image-20220729163305614"></p>
+</li>
+<li><p>npm i element-ui 配置组件库</p>
+</li>
+<li><p>配置axios库 npm i axios –save</p>
+</li>
+</ol>
+<h3 id="2-项目托管github"><a href="#2-项目托管github" class="headerlink" title="2. 项目托管github"></a>2. 项目托管github</h3><h4 id="2-1github新建项目"><a href="#2-1github新建项目" class="headerlink" title="2.1github新建项目"></a>2.1github新建项目</h4><ol start="2">
+<li><code>git remote add orign https://github.com/Reqidou/manage-projects.git</code></li>
+<li><code>git push -u orign master</code></li>
+<li>git常用操作<ol>
+<li>git init</li>
+<li>git add .</li>
+<li>git commin -m ‘’</li>
+<li>git push</li>
+<li>git status</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-项目初始化"><a href="#3-项目初始化" class="headerlink" title="3.项目初始化"></a>3.项目初始化</h3><ol>
+<li>数据库导入</li>
+<li>测试接口是否正常-使用登录接口测试，一切正常</li>
+</ol>
+<h3 id="4-登录功能"><a href="#4-登录功能" class="headerlink" title="4.登录功能"></a>4.登录功能</h3><ol>
+<li><p>git</p>
+<ol>
+<li>创建分支<ul>
+<li><code>git checkout -b login</code></li>
+</ul>
+</li>
+<li>查看分支<ol>
+<li><code>git branch</code></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>创建login组件</p>
+</li>
+<li><p>router配置Login组件并在App页面添加<code>router-view</code>占位。并在router进行重定向</p>
+</li>
+<li><p><code>assets/css/global.css</code>新建全局样式</p>
+</li>
+<li><p>安装less less-loader插件，使用less布局完成登陆外框设计</p>
+</li>
+<li><p>新建<code>plugin/element.js</code>文件，内部按需导入需要用到的饿了么组件，目的是为了增强性能</p>
+</li>
+<li><p>main.js导入字体图标库，<code>iconfont icon-XX</code>或使用自带图标<code>el-icon-user/lock</code>实现</p>
+</li>
+<li><p>完成表单的数据绑定：外部v-model双向绑定，内部使用:model绑定input内容</p>
+</li>
+<li><p>表单验证：（element-ui）规则</p>
+<ol>
+<li><p>表单外部使用:rules&#x3D;”obj”定义对象</p>
+</li>
+<li><p>date数据定义对象，要求</p>
+</li>
+<li><p>item子组件使用prop&#x3D;”obj.name”来绑定规则</p>
+</li>
+</ol>
+</li>
+<li><p>表单重置</p>
+<ol>
+<li>外部el-form添加ref属性，标记</li>
+<li>给重置添加方法</li>
+<li>使用<code>this.$refs.fn.resetFields()重置</code></li>
+</ol>
+</li>
+<li><p>登陆验证</p>
+<ol>
+<li><p>登陆前预验证</p>
+</li>
+<li><p>使用<code>this.$refs.fn.validate(() =&gt; &#123;&#125;)登陆</code></p>
+</li>
+</ol>
+</li>
+<li><p>axios封装出现的问题</p>
+<pre><code>       1. [(39条消息) axios 封装请求方法_不回头~的博客-CSDN博客_axios封装请求](https://blog.csdn.net/saienenen/article/details/115030205)
+  2. [聊聊 Vue 中 axios 的封装 - 掘金 (juejin.cn)](https://juejin.cn/post/6844903969152565261)
+</code></pre>
+</li>
+<li><p>axiox封装问题的解决</p>
+<pre><code>       1. 如何封装aixos？ 或者说axios的配置表，最简单的那种？
+                1. 新建network文件，request.js文件。完成相关配置
+       2. 函数序列化如何解决，还有请求头，模式的改写？
+                1. 请求头使用headers来完成（后续是加载request文件来填写的）
+                2. 模式使用method来编辑。
+           3. 发送post请求，会使发送过来的对象序列化.序列化使用qs插件，使用`data: qs.stringify(&#123;username, password&#125;)`完成
+</code></pre>
+</li>
+<li><p>登陆消息提示（用到elementui组件提示）</p>
+<pre><code>       1. element.js导入：需要使用原型对象Vue.prototype.$message = Message
+  2. 使用this.$message.access/err(res.meta.msg)
+</code></pre>
+</li>
+<li><p>登陆存储token</p>
+<ol>
+<li><p>登陆后会将token存储到客户端的sessionStorange</p>
+<p>  <code>window.sessionStorage.setItem(&#39;token&#39;, res.data.token)</code></p>
+<p>  ​     1.1项目其他接口只有在登陆后才可以访问</p>
+<p>  ​     1.2token在打开当前网站期间生效</p>
+</li>
+</ol>
+<p>​    2.通过编程式导航<code>this.$router.push</code>跳转到后台，路由地址是’&#x2F;home’</p>
+</li>
+<li><p>主页的注册及路由的添加</p>
+</li>
+<li><p>路由导航守卫控制路由导航权限</p>
+</li>
+<li><p>退出登录功能</p>
+<pre><code>       1. home新建info类型button组件
+       2. window.sessionStorage.clear()
+  3. replace退出，防止返回键返回。更严谨
+</code></pre>
+</li>
+<li><p>git合并分支</p>
+<pre><code>       1. 跳转到主分支git checkout master
+  2. 代码合并到主分支git merge login
+</code></pre>
+</li>
+<li><p>子分支推送到git</p>
+<ol>
+<li><p>切换到login分支</p>
+</li>
+<li><p>git push -u origin login</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="5-主页"><a href="#5-主页" class="headerlink" title="5.主页"></a>5.主页</h3><h4 id="5-1-新建git分支"><a href="#5-1-新建git分支" class="headerlink" title="5.1 新建git分支"></a>5.1 新建git分支</h4><ul>
+<li>git checkout -b home</li>
+</ul>
+<h4 id="5-2-主体布局"><a href="#5-2-主体布局" class="headerlink" title="5.2 主体布局"></a>5.2 主体布局</h4><h5 id="5-2-1主页header布局"><a href="#5-2-1主页header布局" class="headerlink" title="5.2.1主页header布局"></a>5.2.1主页header布局</h5><h4 id="5-3-左侧菜单设计"><a href="#5-3-左侧菜单设计" class="headerlink" title="5.3 左侧菜单设计"></a>5.3 左侧菜单设计</h4><h5 id="5-3-1-左侧菜单布局"><a href="#5-3-1-左侧菜单布局" class="headerlink" title="5.3.1 左侧菜单布局"></a>5.3.1 左侧菜单布局</h5><p>​	- 官方复制样式； 注册组件； 修改样式</p>
+<h5 id="5-3-2-获取数据请求"><a href="#5-3-2-获取数据请求" class="headerlink" title="5.3.2 获取数据请求"></a>5.3.2 获取数据请求</h5><ul>
+<li>通过axios请求拦截器添加token</li>
+</ul>
+<p>​		<code>	config.headers.Authorization = window.sessionStorage.getItem(&#39;token&#39;)</code></p>
+<ul>
+<li>获取左侧菜单接口数据<br>-  新建menu文件，用于获取接口数据请求<ul>
+<li>主页导入， 新建数组来存放左侧菜单数据</li>
+<li>使用async await来获取promise请求</li>
+<li>返回错误信息用<code>this.$message.error()</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="5-3-3左侧菜单UI绘制"><a href="#5-3-3左侧菜单UI绘制" class="headerlink" title="5.3.3左侧菜单UI绘制"></a>5.3.3左侧菜单UI绘制</h5><ul>
+<li><p>遍历将数据传递到页面</p>
+</li>
+<li><p>定义对象，键为id，值为图标。</p>
+</li>
+<li><p>unique-opened: 只能打开一个下拉列表</p>
+</li>
+<li><p>border-right将右侧边框线改为0</p>
+</li>
+<li><p>折叠与展开<br>- 使用collapse属性来实现折叠展开效果。需要关闭动画collapse-transition<br>   - 设置它的宽度， 根据isCollapse判定宽度</p>
+</li>
+</ul>
+<h5 id="5-3-4-首页路由重定向"><a href="#5-3-4-首页路由重定向" class="headerlink" title="5.3.4 首页路由重定向"></a>5.3.4 首页路由重定向</h5><ul>
+<li><p>新建子组件Welcome页面</p>
+</li>
+<li><p>路由绑定<br>- router home下子路由children[{}]完成<br>   - router home内通过redirect完成重定向<br>   - home.vue页面添加路由展位符</p>
+</li>
+</ul>
+<h5 id="5-3-5-左侧菜单改为路由链接"><a href="#5-3-5-左侧菜单改为路由链接" class="headerlink" title="5.3.5 左侧菜单改为路由链接"></a>5.3.5 左侧菜单改为路由链接</h5><ul>
+<li>el-menu组件打开router属性</li>
+<li>二级菜单接收通过’&#x2F;‘ + subItem.path来跳转</li>
+</ul>
+<h5 id="5-3-6-左侧列表页"><a href="#5-3-6-左侧列表页" class="headerlink" title="5.3.6 左侧列表页"></a>5.3.6 左侧列表页</h5><ul>
+<li><p>home文件添加子组件</p>
+</li>
+<li><p>添加路径访问</p>
+</li>
+<li><p>用户列表默认显示高亮（default-active）激活</p>
+<ul>
+<li>用户列表在点击时，给它的路径添加高亮。需要进行动态绑定。由于default-active属性需要绑定路径， 所以需要获取二级标题的path属性<br>- 二级标题添加点击事件，使用sessionStorage来存储它的路径。<br>- 创建时，获取它的sessionStorage，定义保存它的数值<br>- 点击时，需要将存储的路径进行切换。更改它的数值</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-3-7-用户列表UI结构"><a href="#5-3-7-用户列表UI结构" class="headerlink" title="5.3.7 用户列表UI结构"></a>5.3.7 用户列表UI结构</h5><ul>
+<li>使用<code>el-breadcrumb</code>面包屑导航；<code>el-card</code>卡片视图；<ul>
+<li><code>el-row</code>行与<code>el-row</code>列结合使用。<ul>
+<li>内部使用input跟button框。<br>  - 修改他们的属性，完成样式布局</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-3-8获取用户列表数据"><a href="#5-3-8获取用户列表数据" class="headerlink" title="5.3.8获取用户列表数据"></a>5.3.8获取用户列表数据</h5><ul>
+<li>get请求获取对象，获取请求数据</li>
+<li>新建数组，存放用户跟总条数</li>
+<li>引入table标签， 使用<code>:data</code>绑定数据源， 子标签使用label编辑标题， <code>prop</code>传入键展示数据</li>
+<li>table标签添加border边框， stripe添加背景颜色</li>
+</ul>
+<h5 id="5-3-9-状态栏的显示效果"><a href="#5-3-9-状态栏的显示效果" class="headerlink" title="5.3.9 状态栏的显示效果"></a>5.3.9 状态栏的显示效果</h5><ul>
+<li>使用<code>template</code>组件，使用v-slot&#x3D;scope插槽来获取数据。</li>
+<li>内部使用<code>switch</code>组件，通过v-model来获取状态信息</li>
+</ul>
+<h5 id="5-3-10-分配角色按钮"><a href="#5-3-10-分配角色按钮" class="headerlink" title="5.3.10 分配角色按钮"></a>5.3.10 分配角色按钮</h5><ul>
+<li>导入<code>template</code>组件，使用<code>v-slot=scope</code>插槽来获取数据</li>
+<li>内部导入三个组件按钮</li>
+<li>第三个组件外部使用<code>tooltip</code>包裹，目的是鼠标悬停的文字提示</li>
+</ul>
+<h5 id="5-3-11-数据分页"><a href="#5-3-11-数据分页" class="headerlink" title="5.3.11 数据分页"></a>5.3.11 数据分页</h5><ul>
+<li>使用<code>pagination</code>组件来完成<br>- size-change：点击切换每页最高容量<br>   - current-change: 点击切换页码<br>   - current-page： 当前页码<br>   - layout： 下部所存在的属性</li>
+</ul>
+<h5 id="5-3-12-用户状态的修改"><a href="#5-3-12-用户状态的修改" class="headerlink" title="5.3.12 用户状态的修改"></a>5.3.12 用户状态的修改</h5><ul>
+<li><p>在组件switch添加点击事件</p>
+</li>
+<li><p>home页面添加新的方法，用来传递axios请求<br>- 使用put方法，由于是在Path修改。所以直接在外部获取它的值，内部拼接完成。</p>
+<ul>
+<li>状态判定，输出结果</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-3-13-搜索功能的实现"><a href="#5-3-13-搜索功能的实现" class="headerlink" title="5.3.13 搜索功能的实现"></a>5.3.13 搜索功能的实现</h5><ul>
+<li>input使用双向绑定，然后通过button的点击事件传递获取用户列表axios请求。<br>- 关键字存放在数组的query内部，用来匹配关键字<ul>
+<li>input可以使用<code>clearable</code>来清楚关键字，然后添加@clear请求，目的是清楚后发送一次获取用户请求。</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-3-14-添加用户的功能"><a href="#5-3-14-添加用户的功能" class="headerlink" title="5.3.14 添加用户的功能"></a>5.3.14 添加用户的功能</h5><ul>
+<li>添加模板<br>- 使用<code>dialog</code>组件，设置visible.sync&#x3D;”data.data &#x3D; true”,底部按钮使用同样方法，来更改组件库的显示状态<ul>
+<li>内容主体<br>- 使用表单控件form, form-item.【rules绑定表单规则prop。 model绑定数组对象】<br>- form v-model绑定对象， 规则绑定表单绑定验证<br>- 每个item使用prop绑定规则。<br>- 每个input框使用双向绑定，绑定form的具体对象</li>
+</ul>
+</li>
+<li>自定义添加规则<br>- data内部进行定义，使用（rule, value, callback）&#x3D;&gt;{}来定义规则，然后再规则下进行调用</li>
+<li>点击其余区域，清空所有参数<ul>
+<li>form外部添加一个@close关闭时间，内部调用ref的resetFields</li>
+</ul>
+</li>
+<li>动态预处理参数验证<ul>
+<li>确认按钮添加addUser事件，首先会判断参数是否填写完整，使用this.$refs.xxx.validate((valid) &#x3D;&gt; {})</li>
+<li>构建post请求，使用判定它的输入状态，进行添加</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-3-15修改用户的功能"><a href="#5-3-15修改用户的功能" class="headerlink" title="5.3.15修改用户的功能"></a>5.3.15修改用户的功能</h5><ul>
+<li>添加模板<br>- 使用dialog组件，设置<code>:visible.sync=&quot;&quot;</code>控制框架显示状态。自定义属性，取消用来隐藏控件。</li>
+<li><strong>获取点击用户信息</strong><br>- 通过edit按钮，来传递参数<code>scope.row.id</code>可以获取到本行的id，然后使用get请求，获取相关的用户对象。将用户对象传递到一个定义的数组里。完成数据的存储</li>
+<li>用户表单数据的绘制<br>- 使用form表单，双向绑定存储对象。 输入规则。<br>   - 定义输入规则，邮箱跟手机号规则来完善数据。自定义验证规则使用validator来验证。<code>validator: checkNAME</code></li>
+<li>关闭表单的重置方法<br>- 对话框添加@close事件，内部调用ref的resetFilds（）方法，用来重置它的内部数据</li>
+<li><strong>修改用户数据</strong><ul>
+<li>提交表单预处理事件<ul>
+<li>确定按钮添加editUser方法，首先判断参数填入是否符合规范，使用this.$refs.editName.validate((valid)&#x3D;&gt;{})</li>
+</ul>
+</li>
+<li>提交表单参数验证<ul>
+<li>新建接口，请求更改信息。通过status判断是否修改成功</li>
+<li>关闭对话框， 刷新数据列表 ， 提示修改状态</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-3-16-删除用户的功能"><a href="#5-3-16-删除用户的功能" class="headerlink" title="5.3.16 删除用户的功能"></a>5.3.16 删除用户的功能</h5><ul>
+<li>使用<code>MessageBox</code>对话框<br>- 添加点击事件<code>removeUserId(scope.row.id)</code>传入id<br>   - 使用自定义事件，原型添加confirm方法，完成样式框的文字填充及提示消息<br>   - 通过异步来获取用户的最终操作，进行最终的删除操作</li>
+<li>删除操作<br>- 发送delete请求，传递id数值，判定状态码，完成用户的删除操作</li>
+</ul>
+<h5 id="5-3-17提交代码到git"><a href="#5-3-17提交代码到git" class="headerlink" title="5.3.17提交代码到git"></a>5.3.17提交代码到git</h5><ul>
+<li>新建本地分支user git checkout -b user</li>
+<li>添加 git add .</li>
+<li>提交 git commit -m ‘’</li>
+<li>远程添加仓库分支user git push -u origin user</li>
+<li>切换到主分支 git checkout master</li>
+<li>合并分支 git merge user</li>
+<li>提交代码到远程仓库 git push</li>
+</ul>
+<h3 id="6-权限管理开发"><a href="#6-权限管理开发" class="headerlink" title="6.权限管理开发"></a>6.权限管理开发</h3><h4 id="6-1-新建git分支"><a href="#6-1-新建git分支" class="headerlink" title="6.1 新建git分支"></a>6.1 新建git分支</h4><ul>
+<li>git checkout -b rights 新建分支</li>
+<li>git push -u origin rights 上传分支到仓库</li>
+</ul>
+<h4 id="6-2-权限列表的开发"><a href="#6-2-权限列表的开发" class="headerlink" title="6.2 权限列表的开发"></a>6.2 权限列表的开发</h4><h5 id="6-2-1-新建权限列表"><a href="#6-2-1-新建权限列表" class="headerlink" title="6.2.1 新建权限列表"></a>6.2.1 新建权限列表</h5><ul>
+<li>新建power文件夹，rights文件夹新建rights文件</li>
+<li>路由器进行子路由的创建<strong>子路由不用加&#x2F;</strong></li>
+</ul>
+<h5 id="6-2-2-绘制主体结构及获取数据"><a href="#6-2-2-绘制主体结构及获取数据" class="headerlink" title="6.2.2 绘制主体结构及获取数据"></a>6.2.2 绘制主体结构及获取数据</h5><ul>
+<li><p>使用面包屑， 卡片视图</p>
+</li>
+<li><p>获取所有权限列表<br>- 使用put请求，获取列表数据，直接传入list即可<br>   - 定义RightsList列表，获取数据</p>
+</li>
+<li><p>卡片表格渲染</p>
+<ul>
+<li>使用<code>tabel&gt;table-column</code>完成列的数值渲染。<br>- table使用:data&#x3D;””传递数组<br>- column使用prop&#x3D;“”获取数据</li>
+<li>商品等级渲染按钮，使用<template v-slot="scope">获取数据<br>- <el-tag scope.row.level>获取单行数据，使用v-if判定显示</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-3-角色列表的开发"><a href="#6-3-角色列表的开发" class="headerlink" title="6.3 角色列表的开发"></a>6.3 角色列表的开发</h4><h5 id="6-3-1-新建页面及添加路由"><a href="#6-3-1-新建页面及添加路由" class="headerlink" title="6.3.1 新建页面及添加路由"></a>6.3.1 新建页面及添加路由</h5><ul>
+<li>新建roles文件夹，新建roless文件</li>
+<li>路由器进行子路由的创建<strong>子路由不用加&#x2F;</strong></li>
+</ul>
+<h5 id="6-3-2-绘制主体结构及获取数据"><a href="#6-3-2-绘制主体结构及获取数据" class="headerlink" title="6.3.2 绘制主体结构及获取数据"></a>6.3.2 绘制主体结构及获取数据</h5><ul>
+<li><p>使用面包屑， 卡片视图，卡片视图内部防止button按钮</p>
+</li>
+<li><p>获取所有用户列表<br>- 使用get请求，获取列表数据</p>
+<ul>
+<li>定义rolesList列表，获取数据</li>
+</ul>
+</li>
+<li><p>卡片表格渲染</p>
+<ul>
+<li>使用<code>tabel&gt;table-column</code>完成列的数值渲染<ul>
+<li>table使用:data&#x3D;””传递数组</li>
+<li>column使用prop&#x3D;“”获取数据</li>
+</ul>
+</li>
+<li>渲染按钮<ul>
+<li>使用<template v-slot="scope">组件获取数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>展开列</p>
+<ul>
+<li>table第一层使用<code>table type=&quot;expand&quot;</code>来绘制展开列</li>
+<li>下接[6.3.6 展开列](#6.3.6 展开列)</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-3-3-添加角色"><a href="#6-3-3-添加角色" class="headerlink" title="6.3.3 添加角色"></a>6.3.3 添加角色</h5><ul>
+<li>组件绘制样式<ul>
+<li>添加对话框Dialog完成文本， 底部的填充<br>- dialog控制显示隐藏效果，</li>
+<li>使用Form表单，添加角色的必要文本<ul>
+<li>对话框关闭事件，对话框关闭使用ref获取表单的数据，进行重置<code>resetFields</code></li>
+</ul>
+</li>
+<li>对话框关闭事件： 对话框关闭的时候，使用ref获取form表单的数据，清空。<br>- form ：<code>:rules=“”添加规则 </code> <code>:model=“”绑定对象</code><br>- form-item:  prop添加规则<br>- inut： v-model&#x3D;“model.name”</li>
+</ul>
+</li>
+<li>添加角色交互请求<br>- 确定按钮添加addRole事件，通过双向绑定，将表格的数据发送请求<br>   - 新建post请求，data接收数据，完成数据处理<br>   - 验证状态码，返回提示信息<br>   - 关闭对话框<br>   - 刷新列表</li>
+</ul>
+<h5 id="6-3-4-修改角色"><a href="#6-3-4-修改角色" class="headerlink" title="6.3.4 修改角色"></a>6.3.4 修改角色</h5><ul>
+<li>组件绘制样式<ul>
+<li>添加对话框Dialog完成文本， 底部填充<br>- dialog控制整体样式</li>
+<li>使用form表单，添加角色文本<ul>
+<li>对话框关闭事件，对话框关闭使用ref获取表单的数据，进行重置<code>resetFields</code></li>
+</ul>
+</li>
+<li>对话框关闭事件： 对话框关闭的时候，使用ref获取form表单的数据，清空。<ul>
+<li>form ：<code>:rules=“”添加规则 </code> <code>:model=“”绑定对象</code></li>
+<li>form-item:  prop添加规则</li>
+<li><strong>item规则名要跟input v-model绑定的名称一致</strong></li>
+<li>input： v-model&#x3D;“model.name”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>修改角色信息请求<ul>
+<li>获取id用户信息<ul>
+<li>通过点击编辑按钮，使用scope.row.id获取当前用户id信息</li>
+<li>通过后台调用，获取网络请求</li>
+<li>将数据传递到数组对象存储</li>
+</ul>
+</li>
+<li>修改表单信息验证<ul>
+<li>使用预验证this.$refs.form.validate(async valid &#x3D;&gt; {})</li>
+<li>表单预处理</li>
+<li>通过网络请求，传递表格数据，根据id修改角色信息</li>
+<li>关闭对话框</li>
+<li>获取角色表单</li>
+<li>提示修改成功</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-3-5-删除角色"><a href="#6-3-5-删除角色" class="headerlink" title="6.3.5 删除角色"></a>6.3.5 删除角色</h5><ul>
+<li>点击事件，根据id来构建对话框的搭建<br>- 使用自定义方法MessageBox方法弹窗，通过异步来获取返回结果<br>   - 根据返回结果判定用户选择的按钮<ul>
+<li>点击确认按钮，通过id获取网络请求，传递参数进行删除</li>
+<li>刷新角色列表</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-3-6-展开列"><a href="#6-3-6-展开列" class="headerlink" title="6.3.6 展开列"></a>6.3.6 展开列</h5><ul>
+<li><p>使用template使用插槽，v-slot&#x3D;”scope”获取数据</p>
+</li>
+<li><p>内部使用pre包裹， 给数据添加格式</p>
+</li>
+<li><p>数据渲染的分析<br>- 通过三层for循环获取每一层的children属性</p>
+</li>
+<li><p>渲染数据(一级)</p>
+<ul>
+<li>使用row col组件，将数据划分成不同的区块，<strong>每列有24个单位</strong><br>使用v-for遍历第一层的children，使用tag优化显示布局</li>
+<li>给组件添加样式，顶线底线。</li>
+<li>添加图标</li>
+</ul>
+</li>
+<li><p>渲染数据(二级三级)</p>
+<ul>
+<li>在分布的col内部，继续使用row， col划分区域</li>
+<li>row进行遍历， 获取二级数据</li>
+<li>三级数据在内部tag标签获取数据</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-3-7-删除角色的指定权限"><a href="#6-3-7-删除角色的指定权限" class="headerlink" title="6.3.7 删除角色的指定权限"></a>6.3.7 删除角色的指定权限</h5><ul>
+<li>三级标签添加closable属性，并调用close方法。传递整行数据，及获取权限的id</li>
+<li>数据请求到后台，返回的过程中，为了避免页面重新刷新，所以进行赋值。</li>
+<li>将当前数组的数据进行替换： role.children &#x3D; res.data</li>
+</ul>
+<h5 id="6-3-8-分配权限"><a href="#6-3-8-分配权限" class="headerlink" title="6.3.8 分配权限"></a>6.3.8 分配权限</h5><ul>
+<li><p>导入dialog对话框，定义对话框的显示状态，及点击事件。</p>
+</li>
+<li><p>点击后，通过网络接口获取所有权限，并将数据传到列表内</p>
+</li>
+<li><p>使用Tree组件展示数据。<code>:data绑定数据列表， ：props绑定传入规则</code></p>
+</li>
+<li><p>tree组件添加show-checked属性，添加复选框</p>
+<ul>
+<li>node-key可以给树添加特定指向，这里指向id</li>
+<li>default-expand-all 默认展开</li>
+</ul>
+</li>
+<li><p>:default-checked-keys 选中复选框<br>- 思路： 获取第三级的数据， 将他们的id存储到数组中，可以展示</p>
+<ul>
+<li>做法：<ul>
+<li>分配权限展示事件，传递行数据</li>
+<li>在展开分配权限框使用递归的方法，获取所有三级节点的id，并传递到数组中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关闭对话框， 默认清空内部数据</p>
+<ul>
+<li>方法1：对话框定义close事件，defKeys&#x3D;[]</li>
+<li>方法2： 使用默认的</li>
+</ul>
+</li>
+<li><p>保存勾选分配权限</p>
+<ul>
+<li>确定按钮添加点击事件，并给tree组件添加ref属性</li>
+<li>新建数组，用于存放所有选中的节点<ul>
+<li>使用…表达式，获取tree中所有勾选的节点<code>getCheckedKeys</code>跟半节点<code>getHalfCheckedKeys</code>，并存放到新数组</li>
+<li>在点击展示分配框的时候，获取当前id，传到组件中</li>
+<li>通过网络请求， 将获取的id跟所有节点发送至后台</li>
+<li>获取表单，关闭对话框</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-3-9-分配角色"><a href="#6-3-9-分配角色" class="headerlink" title="6.3.9 分配角色"></a>6.3.9 分配角色</h5><ul>
+<li>对话框的绘制及数据的获取<br>- 使用对话框， 控制它的显示隐藏。<br>   - 分配角色按钮添加点击事件， 发送整行数据<ul>
+<li>角色信息添加到新定义的对象列表中<ul>
+<li>表单中获取列表的name及rolename</li>
+<li>使用option select选项框<ul>
+<li>select组件使用v-model绑定选中的id</li>
+<li>option组件使用循环，获取列表的id，name并将name对应的id作为value传递</li>
+<li>发送网络请求获取所有的角色列表，并存放到新定义的数组中<br>  - 展示对话框</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>发送请求，修改权限<br>- 判断v-model绑定的id是否赋值<br>   - 发送网络请求，将用户id， 绑定的权限id传递。<br>   - 关闭对话框<br>   - 获取用户列表</li>
+<li>对话框关闭清除事件<ul>
+<li>对话框添加@close事件<br>- 清除选中的id及被分配权限的用户信息</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-3-10-git提交"><a href="#6-3-10-git提交" class="headerlink" title="6.3.10 git提交"></a>6.3.10 git提交</h5><ul>
+<li>git add . </li>
+<li>git commit -m ‘’</li>
+<li>git push</li>
+<li>切换分支 git checkout master</li>
+<li>合并分支 git merge rights</li>
+<li>git push</li>
+</ul>
+<h3 id="7-分类管理页的开发"><a href="#7-分类管理页的开发" class="headerlink" title="7 分类管理页的开发"></a>7 分类管理页的开发</h3><h4 id="7-1-商品分类的开发"><a href="#7-1-商品分类的开发" class="headerlink" title="7.1 商品分类的开发"></a>7.1 商品分类的开发</h4><h5 id="7-1-1-git-分支-创建"><a href="#7-1-1-git-分支-创建" class="headerlink" title="7.1.1  git 分支 创建"></a>7.1.1  git 分支 创建</h5><ul>
+<li>git checkout -b goods_cate</li>
+<li>git push -u origin goods_cate</li>
+</ul>
+<h5 id="7-1-2-商品分类路由组件"><a href="#7-1-2-商品分类路由组件" class="headerlink" title="7.1.2 商品分类路由组件"></a>7.1.2 商品分类路由组件</h5><ul>
+<li>新建文件<code>goods/Cate</code></li>
+<li>添加子路由</li>
+</ul>
+<h5 id="7-1-3-商品分类页的页面结构及数据获取"><a href="#7-1-3-商品分类页的页面结构及数据获取" class="headerlink" title="7.1.3 商品分类页的页面结构及数据获取"></a>7.1.3 商品分类页的页面结构及数据获取</h5><ul>
+<li>页面制作<ul>
+<li>卡片视图<ul>
+<li>row-col-button 按钮</li>
+<li>tabel表格<ul>
+<li>树形列表（2选1）<ul>
+<li>表格使用自带树形结构<code>row-key=&quot;cat_id&quot; :tree-props=&quot;&#123;children: &#39;children&#39;&#125;&quot;</code></li>
+<li>使用vue-table-with-tree-grid，并在main导入并注册全局组件<ul>
+<li>:data&#x3D;””绑定数据列表； </li>
+<li>:columns&#x3D;”” 必填项，否则报错，定义标签跟绑定属性</li>
+<li>:selection-type&#x3D;”false” 关闭复选框</li>
+<li>:expand-type&#x3D;”false” 关闭展开</li>
+<li>show-index 展示索引；</li>
+<li>index-text&#x3D;“” 索引名称</li>
+<li>borde 纵向边框线</li>
+<li>show-row-hover： 鼠标悬停，是否高亮</li>
+</ul>
+</li>
+<li>渲染模板定义完成有效、排序、操作三栏<ul>
+<li>columns内使用type:’template’,template:’’name”定义新的组件名称</li>
+<li>组件内通过<code>&lt;template v-slot:isok=&quot;scope&quot;&gt;</code>获取属性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>pagination分页<ul>
+<li>handleSizeChange：改变每页数量</li>
+<li>handleCurrentChange： 点击第几页跳转</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据交互<ul>
+<li>发送网络请求，传递参数，将获取的数组列表及条数存储</li>
+<li>绑定到tree跟pagination组件，获取相关数据</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-1-4-添加分类"><a href="#7-1-4-添加分类" class="headerlink" title="7.1.4 添加分类"></a>7.1.4 添加分类</h5><ul>
+<li><p>添加对话框，设置其属性</p>
+</li>
+<li><p>添加form表单，参数验证，添加规则</p>
+</li>
+<li><p>父级分类<br>- 获取二级父级分类数据，存放到数组</p>
+<ul>
+<li>使用cascader级联选择器，绑定数据<br>- options绑定获取的数据<br>- v-model双向绑定需要接收的对象<br>- props指定显示的标签，数值及分类名称<ul>
+<li>@change，点击选项发生改变<br>- 保存它的最后一个节点跟等级；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>取消清除数据</p>
+<ul>
+<li>dialog使用close方法， 内部使用resetFields(),级联标签使用setKey &#x3D; 0， pid_level &#x3D; 0.赋值清空</li>
+</ul>
+</li>
+<li><p>点击确认提交</p>
+</li>
+</ul>
+<h5 id="7-1-5-修改分类"><a href="#7-1-5-修改分类" class="headerlink" title="7.1.5 修改分类"></a>7.1.5 修改分类</h5><pre><code>- 添加对话框， 添加form表单验证
+</code></pre>
+<ul>
+<li>具体流程<br>- 用户点击编辑按钮，获取当前行的数据，并存储在数组<br>   - 新建确认事件，使用网络请求，将分类id及name发送网络请求<br>   - 控件验证规则<br>   - 关闭对话框， 刷新列表</li>
+</ul>
+<h5 id="7-1-6-删除分类"><a href="#7-1-6-删除分类" class="headerlink" title="7.1.6 删除分类"></a>7.1.6 删除分类</h5><pre><code>- 	点击事件，根据id来构建对话框的搭建
+</code></pre>
+<ul>
+<li>使用自定义方法MessageBox方法弹窗，通过异步来获取返回结果<br>- 根据返回结果判定用户选择的按钮</li>
+<li>点击确认按钮，通过id获取网络请求，传递参数进行删除</li>
+<li>刷新角色列表</li>
+</ul>
+<h5 id="7-1-7-git提交"><a href="#7-1-7-git提交" class="headerlink" title="7.1.7 git提交"></a>7.1.7 git提交</h5><pre><code>- git checkout goods_cate
+- git add .
+- git commit -m &#39;完成商品分类&#39;
+- git push
+- git checkout master
+- git merge goods_cate
+- git push
+</code></pre>
+<h4 id="7-2-分类参数"><a href="#7-2-分类参数" class="headerlink" title="7.2.分类参数"></a>7.2.分类参数</h4><h5 id="7-2-1-git分支创建"><a href="#7-2-1-git分支创建" class="headerlink" title="7.2.1 git分支创建"></a>7.2.1 git分支创建</h5><pre><code>- git checkout -b goods_params
+- git push -u origin goods_params
+</code></pre>
+<h5 id="7-2-2-参数管理路由组件"><a href="#7-2-2-参数管理路由组件" class="headerlink" title="7.2.2 参数管理路由组件"></a>7.2.2 参数管理路由组件</h5><pre><code>- 注册页面，添加路由
+</code></pre>
+<h5 id="7-2-3-参数管理页面结构及数据获取"><a href="#7-2-3-参数管理页面结构及数据获取" class="headerlink" title="7.2.3 参数管理页面结构及数据获取"></a>7.2.3 参数管理页面结构及数据获取</h5><ul>
+<li><p>面包屑组件</p>
+</li>
+<li><p>卡片组件</p>
+<ul>
+<li><p>警告框</p>
+</li>
+<li><p>分类区域</p>
+<ul>
+<li><p>级联选择器</p>
+<ul>
+<li><p>实现方法</p>
+<ul>
+<li><p>获取所有商品列表，存储到cataList数组中</p>
+</li>
+<li><p>级联选择器，绑定相关的数据。 change事件获取v-model绑定的keys数组</p>
+<ul>
+<li><p><strong>级联选择器的change事件发送网络请求，获取选择的参数列表</strong></p>
+<ul>
+<li><blockquote>
+<p><strong>由于级联选择器选中数据，tabclick切换标签，都需要获取传递参数。并且最终根据属性传递到对应的数组存放。所以需要定义一个方法，在两者中运行即可。很好的一个方法</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Tabs标签页（新东西）</p>
+<ul>
+<li><p>v-model绑定当前的页签名称</p>
+</li>
+<li><p>tab-click页面处理函数</p>
+<ul>
+<li><p><strong>页面处理函数发送网络请求，获取选择的参数列表</strong></p>
+<ul>
+<li><blockquote>
+<p><strong>由于级联选择器选中数据，tabclick切换标签，都需要获取传递参数。并且最终根据属性传递到对应的数组存放。所以需要定义一个方法，在两者中运行即可。很好的一个方法</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>参数表格</p>
+<ul>
+<li>table -&gt; table-column -&gt; template</li>
+</ul>
+</li>
+<li><p>共用参数对话框</p>
+<ul>
+<li><p>el-dialog -&gt; el-form -&gt; el-form-item -&gt; el-input </p>
+<ul>
+<li>添加参数：确定按钮使用方法，发送网络请求，修改结果</li>
+<li>修改参数： <ul>
+<li>点击编辑按钮，获取当前行的数据，通过网络请求传递数据，获取当前的数据并存放到数组中</li>
+<li>点击确认按钮，发送网络请求，传递表格数据，完成数据的修改</li>
+</ul>
+</li>
+<li>删除参数：<ul>
+<li>点击删除按钮，获取当前id，通过网络请求传递数据， 刷新数据， 取消对话框显示</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>展开列的渲染</p>
+<ul>
+<li><code>template(v-slot=scope) -&gt; el-tag scope.row.attr_vals</code></li>
+<li>new Tag<ul>
+<li>input&#x2F;button<ul>
+<li>需要给每个组件注册单独的显示隐藏事件，需要在getParams内，遍历数组，使用<code>this.$set(scope,&#39;elekey&#39;, &#39;value&#39;)</code>实现</li>
+<li>文本框失去焦点鼠标enter，都会通过push添加到vals中，然后清空当前的文本并隐藏</li>
+<li>点击按钮，进入input，需要使用this.nextTick聚焦文本框</li>
+<li>文本框失去焦点，会使新的数组通过网络请求发送到后台</li>
+<li>删除tag标签也会使用上面的方法，重新加载数组，使用同一个网络请求</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取参数列表数据</span></span><br><span class="line">    <span class="keyword">async</span> <span class="title function_">getParamsData</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">selectedCateKeys</span>.<span class="property">length</span> !== <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">selectedCateKeys</span> = []</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">manyTableData</span> = []</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">onlyTableData</span> = []</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">//  根据所选分类id和当前所处的activename发送请求</span></span><br><span class="line">      <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">getCategoriedList</span>(<span class="variable language_">this</span>.<span class="property">cateId</span>, <span class="variable language_">this</span>.<span class="property">activeName</span>)</span><br><span class="line">      <span class="keyword">if</span>(res.<span class="property">meta</span>.<span class="property">status</span> !== <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(<span class="string">&#x27;获取参数列表失败！&#x27;</span>)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 字符串删除，形成数组</span></span><br><span class="line">      res.<span class="property">data</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//数组长度</span></span><br><span class="line">        item.<span class="property">attr_vals</span> = item.<span class="property">attr_vals</span> ? item.<span class="property">attr_vals</span> = item.<span class="property">attr_vals</span>.<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>) : []</span><br><span class="line">        <span class="comment">//控制文本框显示隐藏效果</span></span><br><span class="line">        <span class="variable language_">this</span>.$set(item, <span class="string">&quot;inputVisible&quot;</span>, <span class="literal">false</span>)<span class="comment">//动态绑定方法</span></span><br><span class="line">        <span class="comment">// item.inputVisible = false</span></span><br><span class="line">        <span class="comment">// 文本框输入的数值</span></span><br><span class="line">        <span class="variable language_">this</span>.$set(item, <span class="string">&quot;inputValue&quot;</span>, <span class="string">&#x27;&#x27;</span>)<span class="comment">//动态绑定方法</span></span><br><span class="line">        <span class="comment">// item.inputValue = &#x27;&#x27;</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="comment">//判断数据是属于many还是only,存储在不同数组</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">activeName</span> === <span class="string">&#x27;many&#x27;</span> ? <span class="variable language_">this</span>.<span class="property">manyTableData</span> = res.<span class="property">data</span> : <span class="variable language_">this</span>.<span class="property">onlyTableData</span> = res.<span class="property">data</span></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">manyTableData</span>, <span class="variable language_">this</span>.<span class="property">onlyTableData</span>);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-2-4-提交到git"><a href="#7-2-4-提交到git" class="headerlink" title="7.2.4 提交到git"></a>7.2.4 提交到git</h5><pre><code>- git add .
+- git commit -m &#39;&#39;
+- git push
+- git checkout master
+- git merge goods_params
+- git push
+</code></pre>
+<h4 id="7-3-权限列表"><a href="#7-3-权限列表" class="headerlink" title="7.3 权限列表"></a>7.3 权限列表</h4><h5 id="7-3-1-git新建分支"><a href="#7-3-1-git新建分支" class="headerlink" title="7.3.1 git新建分支"></a>7.3.1 git新建分支</h5><pre><code>- git checkout goods_list
+- git push -u origin master goods_list
+</code></pre>
+<h5 id="7-3-2-页面的创建及路由的编辑"><a href="#7-3-2-页面的创建及路由的编辑" class="headerlink" title="7.3.2 页面的创建及路由的编辑"></a>7.3.2 页面的创建及路由的编辑</h5><h5 id="7-3-2-商品列表的模板与数据的获取"><a href="#7-3-2-商品列表的模板与数据的获取" class="headerlink" title="7.3.2 商品列表的模板与数据的获取"></a>7.3.2 商品列表的模板与数据的获取</h5><pre><code>- 面包屑导航
+</code></pre>
+<ul>
+<li>card卡片组件<ul>
+<li>row :gutter&#x3D;”20” &gt; col :span&#x3D;8  内置两个col<br>- input搜索框双向绑定query搜索，clearable可以清空搜索栏并使用clear获取数据；按钮添加点击获取数据。</li>
+<li>form表格<br>- 数据获取：发送网络请求，将数组对象及total保存返回定义属性<ul>
+<li>过滤器时间戳<br>- main给Vue添加新的过滤器，然后再内部使用<template>组件定义插槽，获取内部事件，使用过滤器写法进行转换<ul>
+<li>删除商品</li>
+</ul>
+</li>
+<li><a href="#7.3.3%E6%B7%BB%E5%8A%A0%E5%95%86%E5%93%81">添加商品</a></li>
+</ul>
+</li>
+<li>pagination分页</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-3-3添加商品"><a href="#7-3-3添加商品" class="headerlink" title="7.3.3添加商品"></a>7.3.3添加商品</h5><ul>
+<li>面包屑导航</li>
+<li>card组件<ul>
+<li>消息提示 alert</li>
+<li>步骤条 steps</li>
+<li>表单form<ul>
+<li>标签页 tabs  <strong>tabs表单内部pane控件，只能跟tabs一起，所以需要外部放置form表单</strong><ul>
+<li>为了防止表单没选择级联选择器分类，使用自带的<code>:before.leave</code>来防止跳转</li>
+<li>给tab添加click事件<code>tab-click</code>根据before.leave的跳转路径，使用网络请求获取不同的接口数据，并保存<ul>
+<li>商品参数的获取与表单建立<ul>
+<li>根据activeIndex，当为1，跳转到商品参数，需要根据级联选择器的id及many参数获取数据，存放到对应数组</li>
+<li>使用<code>el-form-item</code> 循环遍历manytable的数组，获取内部的attr_vals数组。<ul>
+<li>内部使用checkbox复选框，循环遍历attr_vals数组内部的数值绑定</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>商品属性的获取与表单建立<ul>
+<li>根据activeIndex，当为2，跳转商品属性，需要根据级联选择器的id及only参数获取数据，存放到对应数组</li>
+<li>使用<code>el-form-item</code> 循环遍历onlytable的数组，获取内部的attr_vals数组。</li>
+</ul>
+</li>
+<li>商品图片的建立与数据请求<ul>
+<li>使用upload组件，添加请求头获取token，其余详细看代码</li>
+<li>监听图片上传<ul>
+<li>使用<code>:on-success</code>发送事件，将得到的数据返回拼接得到一个对象，并push到addform的pics数组中</li>
+</ul>
+</li>
+<li>移除图片<ul>
+<li>使用<code>:on-remove</code>发送事件，获取参数的临时路径，查找索引，并且使用splite删除</li>
+</ul>
+</li>
+<li>预览图片<ul>
+<li>使用<code>:on-preview</code>，获取内部的url路径，保存到data中，添加dialog对话框，将图片地址绑定到img中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>商品内容的表单创建及数据获取<ul>
+<li>下载<code>Vue-Quill-Editor</code>组件，并全局导入。</li>
+<li>使用基本组件样式，双向绑定addform的描述key，打印addform表单可得到所有的数值</li>
+</ul>
+</li>
+<li>添加商品按钮<ul>
+<li>预验证， </li>
+<li>cats数组转换字符串<ul>
+<li>深拷贝<ul>
+<li>js<code> const newAddForm = JSON.parse(JSON.stringify(this.addForm))</code></li>
+<li>使用<code>lodash</code>插件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>attrs商品参数数组，包含动态参数，静态属性<ul>
+<li>addForm添加数组，存放合并信息</li>
+<li>循环动态参数及静态参数列表，每循环一次，将新增的newinfo赋值到数组中，最终提交深拷贝的对象</li>
+</ul>
+</li>
+<li>添加商品网路接口<ul>
+<li>重要的参数提交，需要将数组转换为字符串存储</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基本信息（tabs内部）<ul>
+<li>el-form-item 四个商品属性</li>
+<li>cascader 级联选择器<ul>
+<li>事件处理函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-4-git提交"><a href="#7-4-git提交" class="headerlink" title="7.4 git提交"></a>7.4 git提交</h5><pre><code>- git add .
+- git commit -m &#39;&#39;
+- git push
+- git checkout master
+- git merge goods_list
+- git push
+</code></pre>
+<h3 id="8-订单管理开发"><a href="#8-订单管理开发" class="headerlink" title="8. 订单管理开发"></a>8. 订单管理开发</h3><pre><code>#### 8.1 git分支创建
+
+- git checkout -b order
+- git push -u origin order
+</code></pre>
+<h4 id="8-2-页面的创建及路由的添加"><a href="#8-2-页面的创建及路由的添加" class="headerlink" title="8.2 页面的创建及路由的添加"></a>8.2 页面的创建及路由的添加</h4><h4 id="8-3-页面的布局及网络请求"><a href="#8-3-页面的布局及网络请求" class="headerlink" title="8.3 页面的布局及网络请求"></a>8.3 页面的布局及网络请求</h4><pre><code>- bread面包屑
+</code></pre>
+<ul>
+<li>card卡片<br>- row &gt; col<code> ：span</code> &gt; input <code>button slot=&quot;append&quot;</code><ul>
+<li>table表格<br>- 数据的获取，使用queryInfo定义，发送网路请求，获取参数<br>- 布局还是以前那样，写一下就好<ul>
+<li>操作<ul>
+<li>修改地址对话框<br>- 导入省市县，使用cas级联选择器，并没有发送请求，因为没借口</li>
+<li>物流信息<br>- 同样的，接口被废弃，没办法获取物流信息。直接写假数据模拟<ul>
+<li><strong>Timeline时间线</strong><br>- 新版本直接使用，通过循环遍历假数据，绑定信息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>pagization分页<br>- 数据获取，每次刷新它的size， page。并且重新提交参数</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-数据统计"><a href="#9-数据统计" class="headerlink" title="9. 数据统计"></a>9. 数据统计</h3><pre><code>#### 9.1 git新建分支
+
+- git checkout -b report
+- git push -u oringin report
+</code></pre>
+<h4 id="9-2页面创建及路由"><a href="#9-2页面创建及路由" class="headerlink" title="9.2页面创建及路由"></a>9.2页面创建及路由</h4><h4 id="9-3-echarts组件的使用"><a href="#9-3-echarts组件的使用" class="headerlink" title="9.3 echarts组件的使用"></a>9.3 echarts组件的使用</h4><ul>
+<li>基础流程<br>- 1.导入echarts<code>imoort * as...</code><br>   - 2.定义一个有宽高的标签<code>div style...</code><br>- 3.mounted内：基于准备好的dom，初始化实例<code>var myChart = echarts.init(dom)</code><br>- 4.准备数据配置项 <code>var option = &#123;&#125;</code><br>- 5.使用指定的配置项和数据显示<code>myChart.setOption(option)</code></li>
+</ul>
+<h3 id="10-项目优化"><a href="#10-项目优化" class="headerlink" title="10.项目优化"></a>10.项目优化</h3><h4 id="10-1nprogress页面加载进度条"><a href="#10-1nprogress页面加载进度条" class="headerlink" title="10.1nprogress页面加载进度条"></a>10.1nprogress页面加载进度条</h4><pre><code>- npm install nprogress --save
+</code></pre>
+<ul>
+<li>request文件导入npro<br>- request拦截器开启进度条<br>   - response关闭进度条</li>
+</ul>
+<h4 id="10-2-可以取消所有console-log的插件"><a href="#10-2-可以取消所有console-log的插件" class="headerlink" title="10.2 可以取消所有console.log的插件"></a>10.2 可以取消所有console.log的插件</h4><pre><code>- npm install babel-plugin-transform-remove-console --save-dev
+</code></pre>
+<ul>
+<li>babel.config.js</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;plugins&#x27;</span>: [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">&#x27;transform-remove-console&#x27;</span>,</span><br><span class="line">    ]</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-3-优化babel。config页面"><a href="#10-3-优化babel。config页面" class="headerlink" title="10.3 优化babel。config页面"></a>10.3 优化babel。config页面</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 项目发布阶段用到的babel插件</span></span><br><span class="line"><span class="keyword">const</span> prodPlugins = []</span><br><span class="line"><span class="keyword">if</span>(process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;production&#x27;</span>) &#123;</span><br><span class="line">  prodPlugins.<span class="title function_">push</span>(<span class="string">&#x27;transform-remove-console&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">presets</span>: [</span><br><span class="line">    <span class="string">&#x27;@vue/cli-plugin-babel/preset&#x27;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&#x27;plugins&#x27;</span>: [</span><br><span class="line">    <span class="comment">//发布产品的插件数组</span></span><br><span class="line">    ...prodPlugins</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="10-4-项目打包"><a href="#10-4-项目打包" class="headerlink" title="10.4 项目打包"></a>10.4 项目打包</h4><p>​	- vue-cli-service build –report 简写就是npm run build</p>
+<h4 id="10-5-通过vue-config-js修改webpack的默认配置"><a href="#10-5-通过vue-config-js修改webpack的默认配置" class="headerlink" title="10.5 通过vue.config.js修改webpack的默认配置"></a>10.5 通过vue.config.js修改webpack的默认配置</h4><pre><code>- transpileDependencies通过链式编程，修改默认的webpack模式
+- configureWebpack通过操作对象，修改默认
+- 为10.6的一个方法
+</code></pre>
+<h4 id="10-6为开发模式与发布模式指定不同的打包入口"><a href="#10-6为开发模式与发布模式指定不同的打包入口" class="headerlink" title="10.6为开发模式与发布模式指定不同的打包入口"></a>10.6为开发模式与发布模式指定不同的打包入口</h4><pre><code>- 开发模式：src/main-dev.js
+- 发布模式： src/main-prod.js
+</code></pre>
+<h4 id="10-7-externals加载外部CDN资源"><a href="#10-7-externals加载外部CDN资源" class="headerlink" title="10.7 externals加载外部CDN资源"></a>10.7 externals加载外部CDN资源</h4><pre><code>    - publicPath: &#39;./&#39; 解决加载空白问题
+</code></pre>
+<h3 id="杂碎知识点"><a href="#杂碎知识点" class="headerlink" title="#杂碎知识点"></a>#杂碎知识点</h3><pre><code>- \&gt;&gt;&gt;只能作用于css，在less、sass、scss中无法识别需要用/deep/
+- 
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">ZhaoX</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://qidou.club/2022/06/16/manage%E6%96%87%E6%A1%A3/">http://qidou.club/2022/06/16/manage%E6%96%87%E6%A1%A3/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">ZhaoX</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/09/06/%E4%BA%94%E3%80%81Http/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="HTTP文档">
+                        
+                        <span class="card-title">HTTP文档</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZhaoX
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/06/16/git/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="git使用">
+                        
+                        <span class="card-title">git使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ZhaoX
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">ZhaoX</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+                <span id="icp"><img src="/medias/icp.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="https://beian.miit.gov.cn/" target="_blank">晋ICP备2022000163号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Reqidou" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1474757780@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1474757780" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1474757780" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/qi-dou-27" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/qi-dou-27" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
